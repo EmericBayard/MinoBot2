@@ -121,12 +121,6 @@ def explore(L, H):
             L[indice].trust_west = L[indice].trust_west+1
 
 
-    
-
-
-    
-
-    
 # def isTraveled(Array):
 
 def mapInList(L):

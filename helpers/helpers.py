@@ -38,3 +38,12 @@ def calculateSleepTime(x1, y1, x2, y2):
 def calculateDistance(x1, y1, x2, y2):
     distance = math.sqrt((x2-x1)**2+(y2-y1)**2)
     return (distance/2)
+
+#tentative de fonction pour ne pas cliquer au meme endroit
+def avoidSameClic(i):
+    if random() < 0.5:
+        return (i+(i*0.01))
+    else:
+        return (i-(i*0.01))
+
+
