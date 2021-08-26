@@ -20,12 +20,18 @@ from recolt.recolt import *
 sys.path.append('./script')
 from script.harvest import *
 #CONSTANT
-MODEL_PATH="./yolov5/runs/train/exp23/weights/rakib.pt"
-IMG_SAMPLE="./assets/models/wheat/images/c1.png"
+MODEL_PATH="./yolov5/runs/train/exp47/weights/best.pt"
+IMG_SAMPLE="./assets/models/wheat/images/c2.png"
+DIRECTORY_PATH="./assets/models/incarnam/images"
 
 def main():
     model = loadModel(MODEL_PATH)
-    harvestWheatOpti(model)
+    #imgScanShow(model, IMG_SAMPLE)
+    for filename in os.listdir(DIRECTORY_PATH):
+        f = os.path.join(DIRECTORY_PATH, filename)
+        imgScanShow(model, f)
+        input("Press Enter to continue...")
+    # harvestWheatOpti(model)
     # wereAmIonScreen()
 
 if __name__ == "__main__":

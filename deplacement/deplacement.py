@@ -6,8 +6,8 @@ from datetime import datetime
 # d'un meme directory
 import sys
 import os.path
-sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
-from mapDetection import getCoordinate
+sys.path.append('./helpers')
+from helpers.mapDetection import *
 
 def goWest():
     x = r.randrange(158, 181, 1)
@@ -60,7 +60,9 @@ class Map():
         self.trust_north = tn
         self.trust_south = ts
 
-# pour l'historique, appelé avec une case au moins
+# pour l'historique, appelé avec une case au moins qui est une string
+# la case de départ
+# fonction qui prend en paramètres 2 list et qui explore le monde
 def explore(L, H):
     s = r.uniform(7.0,8.0)
     currentMap = Map(getCoordinate(), 0, 0, 0, 0)

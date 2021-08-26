@@ -1,0 +1,8 @@
+path: ../data
+train: ../assets/models/wheat/images
+val: ../assets/models/wheat/images
+test: ../data
+
+nc: 2
+
+names: ['wheat', 'gobbals']
